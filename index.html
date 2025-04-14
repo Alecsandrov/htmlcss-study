@@ -4,50 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="task.html">
+    <link rel="stylesheet" href="css/menu.css">
 </head>
-<style>
-    /* ОБЩИЕ */
-
-    body {
-        margin: 0px;
-
-
-    }
-
-    header {
-        background-color: dodgerblue;
-        /* Цвет фона */
-        color: aliceblue;
-        padding: 25px
-    }
-
-    main {
-        background-color: rgb(0, 0, 0);
-        color: darkgray;
-        padding: 25px
-    }
-
-    footer {
-        background-color: #00e561;
-        color: darkorchid;
-        padding: 25px
-    }
-
-
-    h1 {
-        margin: 0;
-
-    }
-
-    p {
-        margin: 0;
-    }
-
-    img {
-        width: 800px;
-        height: 500px;
-    }
-</style>
 
 <body>
 
@@ -55,7 +17,12 @@
     <!-- ШАПКА -->
 
     <header>
-        <h1> HTML и CSS </h1>
+        <div id="menu">
+            <h1> HTML и CSS </h1>
+            <a href="task.html" class="header-a">Задача № 1</a>
+            <a href="article.html" class="header-a">Стаья № 1</a>
+        </div>
+
         <hr>
     </header>
 
@@ -68,9 +35,9 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing. <br> Assumenda expedita dolor rerum sapiente vitae quas dolorem.
             <br> aliquam iste neque laborum, eligendi soluta provident. Ducimus sapiente accusantium fugiat, voluptatum consequatur error blanditiis.
         </p>
-        
- <!-- Якорь -->
-        <a href="article.html">статья</a>
+
+        <!-- Якорь -->
+        <a href="article.html" id="main-a">статья</a>
     </main>
     <!-- ПоДвал -->
     <footer>
