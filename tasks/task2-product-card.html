@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightgray;
+            text-align: center;
+        }
+
+        .product-card {
+            font-family: sans-serif;
+            background-color: #56d4cb;
+            width: 50vw;
+            max-width: 400px;
+            border-style: solid;
+            border-color: darkgray;
+            border-width: 1px;
+            border-radius: 3px;
+            box-shadow: 3px 3px 15px;
+            display: inline-block;
+            margin: 10px;
+            transition-duration: 0.15s;
+            transition-property: transform;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+
+        .product-card:active {
+            transform: scale(0.95);
+        }
+
+
+        .product-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+
+
+        }
+
+        .product-info {
+            padding: 3px;
+        }
+
+        .product-info-row {
+
+            text-align: center;
+            font-size: 24px;
+
+        }
+
+        .product-desc {
+            text-align: left;
+        }
+
+        .product-name {
+            display: inline-block;
+            width: 48%;
+            text-align: left;
+            font-weight: bold;
+            color: red;
+
+        }
+
+        .product-price {
+            display: inline-block;
+            text-align: right;
+            width: 48%;
+            color: blue;
+
+
+        }
+
+        @media (max-width:600px) {
+            .product-card {
+                display: block;
+                width: 100%;
+                margin: 20px auto;
+            }
+
+            .product-info {
+                width: 100%;
+            }
+
+            product-name {
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .product-price {
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: 24px;
+
+            }
+    </style>
+</head>
+
+<body>
+    <div class="product-card">
+
+        <img src="https://png.klev.club/uploads/posts/2024-05/png-klev-club-jziy-p-kvadrat-kontur-png-1.png" class="product-img" draggable="false">
+
+        <div class="product-info">
+
+            <div class="product-info-row">
+                <!-- Название и цена -->
+                <div class="product-name">Квадрат</div>
+
+                <div class="product-price">99 руб.</div>
+            </div>
+
+
+            <p class="product-desc">
+                <!-- Описание -->
+                Lorem ipsum , consectetur adipisicing elit. Voluptatibus cum, libero.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="product-card">
+
+        <img src="https://img-fotki.yandex.ru/get/15494/136164467.4/0_f025c_956892f0_orig.png" class="product-img" draggable="false">
+
+        <div class="product-info">
+
+            <div class="product-info-row">
+                <!-- Название и цена -->
+                <div class="product-name">Треугольник</div>
+
+                <div class="product-price">99 руб.</div>
+            </div>
+
+
+            <p class="product-desc">
+                <!-- Описание -->
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </div>
+
+    </div>
+
+
+</body></html>
