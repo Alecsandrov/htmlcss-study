@@ -16,6 +16,7 @@
     <button onclick="checkAnswer()">Ответить</button>
 
     <button onclick="GetEquation()"> Start</button>
+
     <p id="result" Результат: ...</p>
 
         <script>
@@ -39,10 +40,10 @@
 
             function checkAnswer() {
                 var input = document.querySelector("#input")
-                if (input.value === "") return
+                if (input.value ==="") return
 
 
-
+                
                 var result = document.querySelector("#result")
                 if (Number(input.value) === answer) {
                     console.log("true")
