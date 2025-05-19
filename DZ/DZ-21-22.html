@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Слот-Машина</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #slots {
+            font-size: 50px;
+            margin: 20px;
+        }
+
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3>🎰 Слот-Машина</h3>
+
+    <button onclick="spin()">Крутить!</button>
+
+    <div id="slots">---</div>
+    <p id="result">Нажмите "Крутить!", чтобы сыграть.</p>
+
+    <script>
+        function spin() {
+            var symbols = ["🍒", "🍋", "🔔", "⭐", "🍉"];
+
+            // Выбираем случайные символы
+            var slot1 = symbols[Math.floor(Math.random() * symbols.length)];
+            var slot2 = symbols[Math.floor(Math.random() * symbols.length)];
+            var slot3 = symbols[Math.floor(Math.random() * symbols.length)];
+
+            // Показываем символы
+            document.getElementById("slots").textContent = slot1 + " " + slot2 + " " + slot3;
+
+            // Проверяем результат
+            if (slot1 === slot2 && slot2 === slot3) {
+                document.getElementById("result").textContent = "Поздравляем! Вы выиграли!";
+            } else {
+                document.getElementById("result").textContent = "Попробуйте снова!";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

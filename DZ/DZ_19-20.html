@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Викторина из 3 вопросов</title>
+</head>
+<body>
+
+<h2>1. Столица Франции?</h2>
+<button onclick="checkAnswer(1, 'a')">a) Лондон</button><br>
+<button onclick="checkAnswer(1, 'b')">b) Париж</button><br>
+<button onclick="checkAnswer(1, 'c')">c) Берлин</button><br>
+<button onclick="checkAnswer(1, 'd')">d) Рим</button><br><br>
+
+<h2>2. Сколько будет 2 + 2?</h2>
+<button onclick="checkAnswer(2, 'a')">a) 3</button><br>
+<button onclick="checkAnswer(2, 'b')">b) 4</button><br>
+<button onclick="checkAnswer(2, 'c')">c) 5</button><br>
+<button onclick="checkAnswer(2, 'd')">d) 22</button><br><br>
+
+<h2>3. Какой цвет неба днём?</h2>
+<button onclick="checkAnswer(3, 'a')">a) Зелёный</button><br>
+<button onclick="checkAnswer(3, 'b')">b) Жёлтый</button><br>
+<button onclick="checkAnswer(3, 'c')">c) Синий</button><br>
+<button onclick="checkAnswer(3, 'd')">d) Красный</button><br><br>
+
+<button onclick="showResult()">Показать результат</button>
+
+<p id="result"></p>
+
+<script>
+  // Правильные ответы
+  const correctAnswers = {
+    1: 'b',
+    2: 'b',
+    3: 'c'
+  };
+
+  // Сюда сохраняются ответы пользователя
+  const userAnswers = {};
+
+  function checkAnswer(questionNumber, selected) {
+    userAnswers[questionNumber] = selected;
+  }
+
+  function showResult() {
+    let score = 0;
+
+    for (let i = 1; i <= 3; i++) {
+      if (userAnswers[i] === correctAnswers[i]) {
+        score++;
+      }
+    }
+
+    let message = "Вы набрали " + score + " из 3.";
+
+    if (score === 3) {
+      message += " Отлично!";
+    } else if (score === 2) {
+      message += " Хорошо!";
+    } else if (score === 1) {
+      message += " Есть над чем поработать.";
+    } else {
+      message += " Попробуйте ещё раз!";
+    }
+
+    document.getElementById("result").textContent = message;
+  }
+</script>
+
+</body>
+</html>
